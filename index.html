@@ -50,13 +50,17 @@
 </head>
 <body>
   <header>
-    <a class="brand" href="index.html"><img src="favicon.svg" alt="FARGLO logo">FARGLO</a>
+    <a class="brand" href="index.html" aria-label="FARGLO home"><span class="brand-mark" aria-hidden="true"></span><span>FARGLO</span></a>
     <nav aria-label="Primary navigation">
       <a href="#workflow">Workflow</a>
       <a href="#features">Features</a>
       <a href="#launch">Launch</a>
       <a href="#privacy">Privacy</a>
       <a href="#support">Support</a>
+      <div class="language-switch" role="group" aria-label="Language selector">
+        <button class="lang-button is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-button" type="button" data-lang="ja" aria-pressed="false">JA</button>
+      </div>
     </nav>
   </header>
 
@@ -194,5 +198,203 @@
     <a href="support.html">Support</a>
     <a href="mailto:farglo.support@gmail.com">Contact</a>
   </footer>
+  <script>
+    const copy = {
+      en: {
+        title: "FARGLO — Layered iPhone Color Grading App",
+        description: "FARGLO is a layered iPhone color grading app for RAW photo editing, film looks, Atelier Mix color blending, grain, halation, and non-destructive photo finishing. Coming soon to the App Store.",
+        nav: ["Workflow", "Features", "Launch", "Privacy", "Support"],
+        heroEyebrow: "iPhone color grading app",
+        heroTitle: "Build color.<br>Don't just <em>choose</em> it.",
+        lead: "FARGLO is a RAW photo editor and film look app for iPhone — a layered, non-destructive workspace where you build a grade from primaries, curves and color mixing instead of scrolling a drawer of presets.",
+        primaryCta: "Get launch notification",
+        secondaryCta: "See the workflow",
+        availability: "Coming soon to the App Store · iPhone",
+        panelCaption: "Atelier Mix — blend light like pigment",
+        stats: ["Atelier Mix colors", "aware editing", "accounts, ads, tracking"],
+        strip: ["iPhone color grading app", "RAW photo editor", "Film look app", "Layered photo editing"],
+        workflowEyebrow: "Layer workflow",
+        workflowTitle: "A color grade should stay editable.",
+        workflowBody: "Most mobile editors bake your look into the pixels the moment you tap. FARGLO keeps every decision live. Import once, build a stack of adjustments, and reopen any layer days later — nothing is flattened, nothing is lost.",
+        steps: [
+          ["Import RAW or JPEG", "From a Hasselblad RAW to an iPhone JPEG — the same non-destructive pipeline."],
+          ["Build the grade in layers", "Primaries, curves, Atelier Mix, halation and grain — stacked and reorderable."],
+          ["Re-edit anytime", "Toggle, retune or remove any layer. The original is always intact underneath."]
+        ],
+        features: [
+          ["Before / After", "From snapshot to photograph", "Grade an ordinary iPhone JPEG into a finished image and compare the two side by side — no banding, no broken color."],
+          ["Atelier Mix", "Mix light like a painter", "Blend cinematic washes of color the way an artist works a palette — each one a glaze of light laid over your photo."],
+          ["Layer workflow / Film finish", "Stack, reorder, finish on film", "Reorder layers like a node graph, then close it out with halation, 35mm grain and a clean white frame — all in-app."]
+        ],
+        whyEyebrow: "Why FARGLO",
+        whyTitle: "Not another filter drawer.",
+        typical: "Typical filter apps",
+        typicalList: ["One-tap presets you can't open back up", "Adjustments baked destructively into the JPEG", "Hidden, fixed recipes you can't take apart", "A look in a box"],
+        fargloList: ["Layered grades you can re-edit forever", "Non-destructive on both RAW and JPEG", "Build color from primaries, curves and mix", "A workspace, not a drawer"],
+        launchEyebrow: "Launch notification",
+        launchTitle: "Get the launch notification.",
+        launchBody: "One email when FARGLO ships on the App Store — the day you can start grading on your iPhone. No spam, ever.",
+        launchButton: "Email me at launch",
+        followButton: "Follow on X",
+        privacyEyebrow: "Privacy",
+        privacyTitle: "Your photos stay yours.",
+        privacyBody: "FARGLO edits on-device. Your library and your grades never leave your iPhone, and there's no account required to start.",
+        privacyLink: "Read privacy policy",
+        supportEyebrow: "Support",
+        supportTitle: "We read every message.",
+        supportBody: "Questions, feature requests or a grade you're proud of — write to FARGLO support and you'll hear back from the person building the app.",
+        supportLink: "Contact support",
+        footer: ["Privacy Policy", "Support", "Contact"]
+      },
+      ja: {
+        title: "FARGLO — iPhone用レイヤー式カラーグレーディングアプリ",
+        description: "FARGLOは、RAW編集、フィルムルック、Atelier Mix、粒子、ハレーション、非破壊編集に対応したiPhone向けカラーグレーディングアプリです。App Storeで近日公開。",
+        nav: ["ワークフロー", "機能", "通知", "プライバシー", "サポート"],
+        heroEyebrow: "iPhoneカラーグレーディングアプリ",
+        heroTitle: "色をつくる。<br>選ぶだけではない。",
+        lead: "FARGLOは、iPhoneでRAW現像とフィルムルックづくりを行うための、レイヤー式・非破壊の写真編集ワークスペースです。プリセットを選ぶのではなく、プライマリー、カーブ、色のミックスから自分のグレードを組み立てられます。",
+        primaryCta: "リリース通知を受け取る",
+        secondaryCta: "ワークフローを見る",
+        availability: "App Storeで近日公開 · iPhone",
+        panelCaption: "Atelier Mix — 光を絵具のように混ぜる",
+        stats: ["Atelier Mixの色", "対応編集", "アカウント・広告・追跡なし"],
+        strip: ["iPhoneカラーグレーディング", "RAW写真編集", "フィルムルック", "レイヤー式写真編集"],
+        workflowEyebrow: "レイヤーワークフロー",
+        workflowTitle: "カラーグレードは、あとから直せるべき。",
+        workflowBody: "多くのモバイル編集アプリは、タップした瞬間に見た目をピクセルへ焼き込みます。FARGLOは、すべての判断を編集可能なまま保持します。一度読み込み、調整レイヤーを積み、数日後でも任意のレイヤーを開き直せます。",
+        steps: [
+          ["RAWまたはJPEGを読み込む", "HasselbladのRAWからiPhone JPEGまで、同じ非破壊パイプラインで扱えます。"],
+          ["レイヤーでグレードを組む", "プライマリー、カーブ、Atelier Mix、ハレーション、粒子を積み重ね、並べ替えられます。"],
+          ["いつでも再編集する", "任意のレイヤーをオンオフ、再調整、削除できます。元画像は常に下に残ります。"]
+        ],
+        features: [
+          ["Before / After", "スナップショットを作品へ", "ふつうのiPhone JPEGを完成した写真へグレーディングし、編集前後を横並びで比較できます。色の破綻やバンディングを抑えます。"],
+          ["Atelier Mix", "光を絵具のように混ぜる", "映画的な色のベールを、画家がパレットを扱うように重ねます。写真の上に光の薄い層を置いていく感覚です。"],
+          ["レイヤーワークフロー / フィルム仕上げ", "積み、並べ替え、フィルムで仕上げる", "ノードグラフのようにレイヤーを並べ替え、最後にハレーション、35mm粒子、白フレームまでアプリ内で仕上げられます。"]
+        ],
+        whyEyebrow: "Why FARGLO",
+        whyTitle: "ただのフィルター一覧ではありません。",
+        typical: "一般的なフィルターアプリ",
+        typicalList: ["開き直せないワンタッププリセット", "JPEGへ破壊的に焼き込まれる調整", "分解できない固定レシピ", "箱に入った既製の見た目"],
+        fargloList: ["何度でも再編集できるレイヤー式グレード", "RAWとJPEGの両方で非破壊編集", "プライマリー、カーブ、ミックスから色を構築", "フィルター引き出しではなく、制作ワークスペース"],
+        launchEyebrow: "リリース通知",
+        launchTitle: "リリース通知を受け取る。",
+        launchBody: "FARGLOがApp Storeで公開された日に、一度だけメールでお知らせします。スパムは送りません。",
+        launchButton: "公開時にメールで通知",
+        followButton: "Xでフォロー",
+        privacyEyebrow: "プライバシー",
+        privacyTitle: "あなたの写真は、あなたのもの。",
+        privacyBody: "FARGLOは端末上で編集します。写真ライブラリやグレードがiPhoneの外へ出ることはなく、始めるためのアカウントも不要です。",
+        privacyLink: "プライバシーポリシーを読む",
+        supportEyebrow: "サポート",
+        supportTitle: "すべてのメッセージを読みます。",
+        supportBody: "質問、機能リクエスト、自慢したいグレードまで。FARGLOサポートへ送ると、開発者本人から返信します。",
+        supportLink: "サポートに連絡",
+        footer: ["プライバシーポリシー", "サポート", "お問い合わせ"]
+      }
+    };
+
+    const setText = (selector, value) => {
+      const node = document.querySelector(selector);
+      if (node) node.textContent = value;
+    };
+
+    const setHtml = (selector, value) => {
+      const node = document.querySelector(selector);
+      if (node) node.innerHTML = value;
+    };
+
+    const applyLanguage = (lang) => {
+      const t = copy[lang] || copy.en;
+      document.documentElement.lang = lang;
+      document.title = t.title;
+      const description = document.querySelector('meta[name="description"]');
+      if (description) description.setAttribute("content", t.description);
+
+      document.querySelectorAll("nav > a").forEach((link, index) => {
+        if (t.nav[index]) link.textContent = t.nav[index];
+      });
+
+      setText(".hero .eyebrow", t.heroEyebrow);
+      setHtml("#hero-title", t.heroTitle);
+      setText(".lead", t.lead);
+      setText(".hero-actions .primary", t.primaryCta);
+      setText(".hero-actions .secondary", t.secondaryCta);
+      setText(".availability", t.availability);
+      setText(".panel-caption", t.panelCaption);
+      document.querySelectorAll(".stats dd").forEach((item, index) => {
+        if (t.stats[index]) item.textContent = t.stats[index];
+      });
+      document.querySelectorAll(".strip span").forEach((item, index) => {
+        if (t.strip[index]) item.textContent = t.strip[index];
+      });
+
+      setText("#workflow .eyebrow", t.workflowEyebrow);
+      setText("#workflow h2", t.workflowTitle);
+      setText("#workflow > div:first-child > p:not(.eyebrow)", t.workflowBody);
+      document.querySelectorAll(".workflow-list li").forEach((item, index) => {
+        if (!t.steps[index]) return;
+        const title = item.querySelector("strong");
+        const body = item.querySelector("small");
+        if (title) title.textContent = t.steps[index][0];
+        if (body) body.textContent = t.steps[index][1];
+      });
+
+      document.querySelectorAll(".feature-grid article").forEach((article, index) => {
+        if (!t.features[index]) return;
+        const kicker = article.querySelector(".feature-kicker");
+        const title = article.querySelector("h3");
+        const body = article.querySelector("p:last-child");
+        if (kicker) kicker.textContent = t.features[index][0];
+        if (title) title.textContent = t.features[index][1];
+        if (body) body.textContent = t.features[index][2];
+      });
+
+      setText(".comparison .eyebrow", t.whyEyebrow);
+      setText(".comparison h2", t.whyTitle);
+      setText(".compare-negative h3", t.typical);
+      [".compare-negative", ".compare-positive"].forEach((selector, listIndex) => {
+        const list = listIndex === 0 ? t.typicalList : t.fargloList;
+        document.querySelectorAll(`${selector} .compare-list li`).forEach((item, index) => {
+          const icon = item.querySelector("span");
+          item.textContent = "";
+          if (icon) item.appendChild(icon);
+          item.append(list[index]);
+        });
+      });
+
+      setText("#launch .eyebrow", t.launchEyebrow);
+      setText("#launch h2", t.launchTitle);
+      setText("#launch p:not(.eyebrow)", t.launchBody);
+      setText(".launch-actions .primary", t.launchButton);
+      setText(".launch-actions .secondary", t.followButton);
+
+      setText("#privacy .eyebrow", t.privacyEyebrow);
+      setText("#privacy h3", t.privacyTitle);
+      setText("#privacy p:not(.eyebrow)", t.privacyBody);
+      setText("#privacy a", t.privacyLink);
+      setText("#support .eyebrow", t.supportEyebrow);
+      setText("#support h3", t.supportTitle);
+      setText("#support p:not(.eyebrow)", t.supportBody);
+      setText("#support a", t.supportLink);
+
+      document.querySelectorAll("footer a").forEach((link, index) => {
+        if (t.footer[index]) link.textContent = t.footer[index];
+      });
+
+      document.querySelectorAll(".lang-button").forEach((button) => {
+        const isActive = button.dataset.lang === lang;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+      localStorage.setItem("farglo-language", lang);
+    };
+
+    document.querySelectorAll(".lang-button").forEach((button) => {
+      button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+    });
+
+    applyLanguage(localStorage.getItem("farglo-language") || "en");
+  </script>
 </body>
 </html>
